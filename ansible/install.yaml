@@ -1,0 +1,7 @@
+- name: Install the Stackrox demo artefacts
+  hosts: localhost
+  vars:
+    ACTION: create
+  roles:
+  - { name: ocp4_workload_stackrox_demo_apps, tags: apps }
+  - { name: ocp4_workload_stackrox_demo_pipeline, tags: pipeline }

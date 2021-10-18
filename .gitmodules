@@ -1,0 +1,4 @@
+[submodule "agnosticd"]
+	path = ansible/agnosticd
+	url = https://github.com/redhat-cop/agnosticd.git
+	branch = development

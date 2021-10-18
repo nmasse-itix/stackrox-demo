@@ -1,0 +1,54 @@
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  name: stackrox
+spec:
+  repositoryDigestMirrors:
+
+  - source: gcr.io/rox-se/sample-image
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/sample-image
+
+  - source: gcr.io/rox-se/srox/netflow
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/netflow
+
+  - source: gcr.io/rox-se/struts-violations/mastercard-processor
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/mastercard-processor
+
+  - source: gcr.io/rox-se/struts-violations/visa-processor
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/visa-processor
+
+  - source: gcr.io/rox-se/srox/visa-processor
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/visa-processor-sidecar
+
+  - source: gcr.io/rox-se/srox/jump-host
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/jump-host
+
+  - source: gcr.io/rox-se/srox/proxy
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/proxy
+
+  - source: gcr.io/rox-se/srox/reporting
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/reporting
+
+  - source: gcr.io/rox-se/struts-violations/asset-cache
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/struts-asset-cache
+
+  - source: gcr.io/rox-se/srox/asset-cache
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/srox-asset-cache
+
+  - source: gcr.io/rox-se/srox/monitor
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/monitor
+    
+  - source: gcr.io/rox-se/struts-violations/backend-atlas
+    mirrors:
+    - registry.itix.xyz/stackrox-demo/backend-atlas
